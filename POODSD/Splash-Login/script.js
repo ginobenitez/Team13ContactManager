@@ -23,7 +23,14 @@ loginLink.addEventListener('click', ()=> {
 
 btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
-    loadCircle.style.display = 'block';
+    if (wrapper.classList.contains('active')) {
+        loadCircle.style.display = 'none';
+        loadOval.style.display = 'block';
+    }
+    else {
+        loadCircle.style.display = 'block';
+        loadOval.style.display = 'none';
+    }
 });
 
 closeLogin.addEventListener('click', ()=> {
