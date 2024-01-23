@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 
-/* .container span {
+.container span {
     position: absolute;
     left: 0;
     width: 32px;
@@ -35,7 +35,7 @@ body {
     transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
     animation: animateBlink 3s linear infinite;
     animation-delay: calc(var(--i) * (3s / 50));
-} */
+}
 
 .load-circle span {
     position: absolute;
@@ -52,6 +52,24 @@ body {
 
 .load-circle {
     display: none;
+}
+.load-oval span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 157px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+.load-oval {
+    display: none;
+    position: absolute;
+    left: -13%;
 }
 
 .wrapper {
