@@ -7,13 +7,18 @@ const closeLogin = document.querySelector('.close-btn');
 const closeRegister = document.querySelector('[type="register-close"]');
 
 const loadCircle = document.querySelector('.load-circle');
+const loadOval = document.querySelector('.load-oval');
 
 signupLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
+    loadCircle.style.display = 'none';
+    loadOval.style.display = 'block';
 });
 
 loginLink.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
+    loadCircle.style.display = 'block';
+    loadOval.style.display = 'none';
 });
 
 btnPopup.addEventListener('click', ()=> {
@@ -28,6 +33,7 @@ closeLogin.addEventListener('click', ()=> {
 
 closeRegister.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
+    wrapper.classList.remove('active');
     loadCircle.style.display = 'none';
+    loadOval.style.display = 'none';
 });
-
