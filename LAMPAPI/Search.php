@@ -25,8 +25,6 @@
 				$searchResults .= ",";
 			}
 			$searchCount++;
-			// $searchResults .= '"' . $row["FirstName"] . '"';
-			//"." means add
 			$searchResults .= '{"FirstName" : "' . $row["FirstName"]. '", "LastName" : "' . $row["LastName"]. '", "PhoneNumber" : "' . $row["PhoneNumber"]. '", "EmailAddress" : "' . $row["EmailAddress"]. '", "UserID" : "' . $row["UserID"].'", "ID" : "' . $row["ID"]. '"}';
 		}
 
