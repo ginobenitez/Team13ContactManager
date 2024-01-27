@@ -17,44 +17,35 @@
     
     $conn = new mysqli("localhost", "TheBeast", "1loveComputers", "COP4331");
     
-    if ($conn->connect_error) {
+    if ($conn->connect_error) 
+    {
         returnWithError($conn->connect_error);
-    } else {
+    } 
+    else 
+    {
         $stmt = $conn->prepare("INSERT INTO Contacts (FirstName, LastName, Phone, Email, UserID) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssi", $firstName, $lastName, $phone, $email, $userID);
-    
-        if ($stmt->execute()) {
-            $id = $stmt->insert_id;
-            returnWithInfo($id, $firstName, $lastName, $phone, $email);
-        } else {
-            returnWithError("Failed to add contact");
-        }
-    
-        $stmt->close();
-        $conn->close();
+		$stmt->execute();
+		$stmt->close();
+		$conn->close();
+		returnWithError("");
     }
     
     function getRequestInfo()
-    {
-        return json_decode(file_get_contents('php://input'), true);
-    }
-    
-    function sendResultInfoAsJson($obj)
-    {
-        header('Content-type: application/json');
-        echo $obj;
-    }
-    
-    function returnWithError($err)
-    {
-        $retValue = '{"error":"' . $err . '"}';
-        sendResultInfoAsJson($retValue);
-    }
-    
-    function returnWithInfo($id, $firstName, $lastName, $phone, $email)
-{
-    $retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","phone":"' . $phone . '","email":"' . $email .  '","error":""}';
-    sendResultInfoAsJson($retValue);
-}
+	{
+		return json_decode(file_get_contents('php://input'), true);
+	}
+
+	function sendResultInfoAsJson( $obj )
+	{
+		header('Content-type: application/json');
+		echo $obj;
+	}
+	
+	function returnWithError( $err )
+	{
+		$retValue = '{"error":"' . $err . '"}';
+		sendResultInfoAsJson( $retValue );
+	}
 
 ?>
