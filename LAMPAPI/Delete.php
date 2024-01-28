@@ -16,17 +16,26 @@
     {
         $stmt = $conn->prepare("DELETE FROM Contacts WHERE FirstName = ? AND LastName = ? AND UserID = ?");
         $stmt->bind_param("ssi", $firstName, $lastName, $userID);
-
-        if ($stmt->execute()) 
-        {
-            returnWithInfo($firstName, $lastName, $userID);
-        } 
-        else 
-        {
-            returnWithError("Failed to delete contact");
-        }
-
+        $stmt->execute();
         $stmt->close();
         $conn->close();
+        returnWithError("");
     }
+
+    function getRequestInfo()
+	{
+		return json_decode(file_get_contents('php://input'), true);
+	}
+
+	function sendResultInfoAsJson( $obj )
+	{
+		header('Content-type: application/json');
+		echo $obj;
+	}
+	
+	function returnWithError( $err )
+	{
+		$retValue = '{"error":"' . $err . '"}';
+		sendResultInfoAsJson( $retValue );
+	}
 ?>
