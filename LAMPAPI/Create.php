@@ -1,12 +1,4 @@
 <?php
-    /*
-    Contacts need:
-    Name (first & last)
-    Email
-    Phone
-    Date created
-    */
-
     $inData = getRequestInfo();
 
     $firstName = $inData["firstName"];
