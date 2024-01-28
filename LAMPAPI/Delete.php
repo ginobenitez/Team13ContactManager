@@ -17,16 +17,9 @@
         $stmt = $conn->prepare("DELETE FROM Contacts WHERE FirstName = ? AND LastName = ? AND UserID = ?");
         $stmt->bind_param("ssi", $firstName, $lastName, $userID);
         $stmt->execute();
-        if ($stmt->affected_rows > 0) {
-            $stmt->close();
-            $conn->close();
-            returnWithError("");
-        } else {
-            // if the contact does not exist
-            $stmt->close();
-            $conn->close();
-            returnWithError("Contact not found");
-        }
+        $stmt->close();
+        $conn->close();
+        returnWithError("");
     }
 
     function getRequestInfo()
