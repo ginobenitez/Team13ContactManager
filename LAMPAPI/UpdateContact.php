@@ -4,7 +4,7 @@
 
     $firstName = $inData["firstName"];
     $lastName = $inData["lastName"];
-    $userID = $inData["UserID"];
+    $contactID = $inData["ID"];
     $phone = $inData["phone"];
     $email = $inData["email"];
     
@@ -15,8 +15,8 @@
         returnWithError($conn->connect_error);
     } 
     else{
-        $stmt = $conn->prepare("UPDATE Contacts SET firstName = ?, lastName = ?, Phone = ?, Email = ? WHERE UserID = ?");
-        $stmt->bind_param("ssssi", $firstName, $lastName, $phone, $email, $userID);
+        $stmt = $conn->prepare("UPDATE Contacts SET firstName = ?, lastName = ?, Phone = ?, Email = ? WHERE ID = ?");
+        $stmt->bind_param("ssssi", $firstName, $lastName, $phone, $email, $contactID);
         $stmt->execute();
 
         $stmt->close();
