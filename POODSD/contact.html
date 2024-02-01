@@ -1,58 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact Page</title>
-    <script type="text/javascript" src="js/code.js"></script>
-   <link rel="stylesheet" href="Splash-Login/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="Signed-In/style.css">
 </head>
 <body>
-
+    <!-- Handles Header for the Page -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
-            <div class="container">
-                <a href="contact.html" class="navbar-brand">
-                    <img src="images/logo.png" alt="Logo" style="width:40px;" class="rounded-circle mr-2">
-                    cosmos
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <span id="navUser" class="nav-link">User</span>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link btn btn-link" id="logoutButton" onclick="doLogout();">
-                                <i class="material-icons">exit_to_app</i>
-                                Log out
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="logo">
+            <img src="Signed-In/poodlogo.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+            <a href="index.html">
+                <button class="btnSignout-popup">Sign Out</button>
+            </a>
         </nav>
     </header>
 
-    <main class="py-4">
-        <div id="accessUIDiv" class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div id="searchAddBar" class="d-flex justify-content-between align-items-center mb-3">
-                        <button id="addBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">+ Add Contact</button>
-                        <div class="input-group">
-                            <input id="searchText" type="search" placeholder="Search contacts" class="form-control">
-                            <div class="input-group-append">
-                                <button id="searchBtn" class="btn btn-secondary" type="button" onclick="searchContacts();">Search</button>
-                            </div>
-                        </div>
-                        <button id="clearBtn" type="button" class="btn btn-secondary" onclick="displayContacts(''); document.getElementById('searchText').value = '';">Clear</button>
+    <!-- Maintains the Contact List and box for list entry -->
+        <div class="container">
+            <div class="contact-list">
+                <h2>Contact List</h2>
+                <button class="addC">Add Contact</button>
+                <form class="contact-form">
+                    <div class="input-box">
+                        <input type="FirstName" required>
+                        <label>Enter First Name</label>
                     </div>
-
-                </div>
+                    <div class="input-box">
+                        <input type="LastName" required>
+                        <label>Enter Last Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="PhoneNumber" required>
+                        <label>Enter Phone Number</label>
+                    </div>
+                    <button type="submit" class="btn">Save</button>
+                    <button type="cancel" class="cancelBtn">Cancel</button>
+                </form>
+                <!-- Unordered list to store entries -->
+                <ul id="contactList" class="listClass">
+                    
+                </ul>
             </div>
         </div>
-    </main>
+
+        <script src="Signed-In/script.js"></script>
 
 </body>
 </html>

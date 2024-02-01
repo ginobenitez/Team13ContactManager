@@ -8,16 +8,19 @@
 </head>
 <body>
 
+    <!-- Splash Page Header and Elements -->
     <header>
         <div class="logo">
-            <img src="poodlogo.png" alt="Logo">
+            <img src="Splash-Login/poodlogo.png" alt="Logo">
         </div>
         <nav class="navigation">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <button class="btnLogin-popup">Login</button>
+            <button class="btnLogin-popup">Log In</button>
         </nav>
     </header>
+
+    <!-- Handles the Login Box -->
     <div class="container">
         <div class="wrapper">
             <div class="login-box">
@@ -34,19 +37,26 @@
                     <div class="forgot-password">
                         <a href="#">Forgot Your Password</a>
                     </div>
-                    <!-- <a href="../Signed-In/index.html" class="btn"> -->
-                        <button type="submit" class="btn">Login</button>
-                    <!-- </a> -->
+                        <button type="submit" class="btn">Log In</button>
                 </form>
                     <div class="signup-link">
                         <a href="#">Sign Up!</a>
                     </div>
                     <button type="login-close" class="close-btn">Close</button>
             </div>
-            <!-- Registration Form -->
+
+            <!-- Handles the Registration Box -->
             <div class="register-box">
                 <h2>Register with Us!</h2>
-                <form action="#">
+                <form action="contact.html">
+                    <div class="input-box">
+                        <input type="Username" required>
+                        <label>Enter your First Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="Username" required>
+                        <label>Enter your Last Name</label>
+                    </div>
                     <div class="input-box">
                         <input type="Username" required>
                         <label>Enter a New Username</label>
@@ -55,14 +65,17 @@
                         <input type="password" required>
                         <label>Enter a New Password</label>
                     </div>
-                    <button type="submit" class="btn">Sign up</button>
+                        <button type="submit" class="btn">Sign up</button>
+                </form>
                     <div class="login-link">
                         <a href="#">Registered? Sign in here!</a>
                     </div>
                     <button type="register-close" class="close-btn">Close</button>
             </div>
     </div>
-    <div class="load-circle">
+
+    <!-- Spanners for the Spinning Circle on Login and Sign Up -->
+    <div class="load-oval">
         <span style="--i:0;"></span>
         <span style="--i:1;"></span>
         <span style="--i:2;"></span>
@@ -114,7 +127,8 @@
         <span style="--i:48;"></span>
         <span style="--i:49;"></span>
     </div>
-    <div class="load-oval">
+
+    <div class="load-circle">
         <span style="--i:0;"></span>
         <span style="--i:1;"></span>
         <span style="--i:2;"></span>
