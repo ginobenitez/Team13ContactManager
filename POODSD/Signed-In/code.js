@@ -115,9 +115,10 @@ function addContact()
 	let newFirst = document.getElementById("newFirst").value;
 	let newLast = document.getElementById("newLast").value;
 	let newNumber = document.getElementById("newNumber").value;
+	let newEmail = document.getElementById("newEmail").value;
 	document.getElementById("addContactResult").innerHTML = "";
 
-	let tmp = {color:newColor,userId,userId};
+	let tmp = {FirstName:newFirst,LastName:newLast,Phone:newNumber,Email:newEmail,UserID:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/CreateContact.' + extension;
