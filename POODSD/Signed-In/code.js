@@ -109,38 +109,6 @@ function doLogout()
 	window.location.href = "index.html";
 }
 
-contactForm.addEventListener('submit', function(e) 
-{
-	let newFirst = document.getElementById("newFirst").value;
-    let newLast = document.getElementById("newLast").value;
-    let newNumber = document.getElementById("newNumber").value;
-	document.getElementById("addContactResult").innerHTML = "";
-
-	let tmp = {contact:newFirst,newLast,newNumber,userId,userId};
-	let jsonPayload = JSON.stringify( tmp );
-
-	let url = urlBase + '/CreateContact.' + extension;
-	
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	try
-	{
-		xhr.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				document.getElementById("addContactResult").innerHTML = "Contact has been added";
-			}
-		};
-		xhr.send(jsonPayload);
-	}
-	catch(err)
-	{
-		document.getElementById("addContactResult").innerHTML = err.message;
-	}
-	
-})
 
 function searchColor()
 {
