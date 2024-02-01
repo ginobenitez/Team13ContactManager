@@ -1,11 +1,12 @@
 const urlBase = 'http://reachout-hub.com/LAMPAPI';
 const extension = 'php';
-
+const contactForm = document.querySelector('.contact-form');
+const loginButton = document.getElementById("loginBtn")
 let userId = 0;
 let firstName = "";
 let lastName = "";
 
-function doLogin()
+contactForm.addEventListener('click', function(e) 
 {
 	userId = 0;
 	firstName = "";
@@ -56,7 +57,7 @@ function doLogin()
 		document.getElementById("loginResult").innerHTML = err.message;
 	}
 
-}
+})
 
 function saveCookie()
 {
