@@ -117,7 +117,8 @@ function addContact()
 	let newNumber = document.getElementById("newNumber").value;
 	let newEmail = document.getElementById("newEmail").value;
 	document.getElementById("addContactResult").innerHTML = "";
-
+	
+	alert(userId);
 	let tmp = {FirstName:newFirst,LastName:newLast,Phone:newNumber,Email:newEmail,UserID:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
