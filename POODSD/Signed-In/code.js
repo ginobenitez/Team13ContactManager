@@ -47,7 +47,7 @@ function doLogin () {
 				saveCookie();
 				
 				window.location.href = "contact.html";
-				alert(firstName, lastName);
+				alert(firstName+","+lastName);
 			}
 		};
 		xhr.send(jsonPayload);
