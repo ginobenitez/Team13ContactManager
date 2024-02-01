@@ -57,12 +57,7 @@ function doLogin () {
 		document.getElementById("loginResult").innerHTML = err.message;
 	}
 }
-loginButton.addEventListener('submit', function(doLogin) 
-{
 
-	console.log(firstName, lastName);
-			
-})
 
 function saveCookie()
 {
