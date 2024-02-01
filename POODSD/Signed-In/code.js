@@ -119,7 +119,7 @@ function addContact()
 	document.getElementById("addContactResult").innerHTML = "";
 	
 	alert(userId);
-	let tmp = {FirstName:newFirst,LastName:newLast,Phone:newNumber,Email:newEmail,UserID:userId};
+	let tmp = {firstname:newFirst,lastname:newLast,phone:newNumber,email:newEmail,userid:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/CreateContact.' + extension;
