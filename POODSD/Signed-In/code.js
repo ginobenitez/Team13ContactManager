@@ -112,13 +112,15 @@ function doLogout()
 
 function addContact()
 {
-	let newColor = document.getElementById("colorText").value;
-	document.getElementById("colorAddResult").innerHTML = "";
+	let newFirst = document.getElementById("newFirst").value;
+	let newLast = document.getElementById("newLast").value;
+	let newNumber = document.getElementById("newNumber").value;
+	document.getElementById("addContactResult").innerHTML = "";
 
 	let tmp = {color:newColor,userId,userId};
 	let jsonPayload = JSON.stringify( tmp );
 
-	let url = urlBase + '/AddColor.' + extension;
+	let url = urlBase + '/CreateContact.' + extension;
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -129,14 +131,15 @@ function addContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("colorAddResult").innerHTML = "Color has been added";
+				//document.getElementById("addContactResult").innerHTML = "Color has been added";
+				alert("New contact added!");
 			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		document.getElementById("colorAddResult").innerHTML = err.message;
+		alert(err.message);
 	}
 	
 }
