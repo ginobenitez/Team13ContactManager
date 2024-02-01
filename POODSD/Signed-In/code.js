@@ -6,8 +6,7 @@ let userId = 0;
 let firstName = "";
 let lastName = "";
 
-loginButton.addEventListener('click', function() 
-{
+function doLogin () {
 	userId = 0;
 	firstName = "";
 	lastName = "";
@@ -57,7 +56,12 @@ loginButton.addEventListener('click', function()
 	{
 		document.getElementById("loginResult").innerHTML = err.message;
 	}
+}
+loginButton.addEventListener('submit', function(doLogin) 
+{
 
+	console.log(firstName, lastName);
+			
 })
 
 function saveCookie()
