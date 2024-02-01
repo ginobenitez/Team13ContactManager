@@ -95,10 +95,10 @@ function readCookie()
 	{
 		window.location.href = "index.html";
 	}
-	else
+	/*else
 	{
 		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
-	}
+	}*/
 }
 
 function doLogout()
