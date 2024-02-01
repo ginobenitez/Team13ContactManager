@@ -6,7 +6,7 @@ let userId = 0;
 let firstName = "";
 let lastName = "";
 
-loginButton.addEventListener('click', function(e) 
+loginButton.addEventListener('click', function() 
 {
 	userId = 0;
 	firstName = "";
