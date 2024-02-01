@@ -118,8 +118,7 @@ function addContact()
 	let newEmail = document.getElementById("newEmail").value;
 	document.getElementById("addContactResult").innerHTML = "";
 	
-	alert(userId);
-	let tmp = {firstname:newFirst,lastname:newLast,phone:newNumber,email:newEmail,userid:userId};
+	let tmp = {firstName:newFirst,lastName:newLast,phone:newNumber,email:newEmail,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/CreateContact.' + extension;
