@@ -26,19 +26,20 @@
                 <button class="addC">Add Contact</button>
                 <form class="contact-form">
                     <div class="input-box">
-                        <input type="FirstName" required>
+                        <input id = "newFirst" type="FirstName" required>
                         <label>Enter First Name</label>
                     </div>
                     <div class="input-box">
-                        <input type="LastName" required>
+                        <input id = "newLast" type="LastName" required>
                         <label>Enter Last Name</label>
                     </div>
                     <div class="input-box">
-                        <input type="PhoneNumber" required>
+                        <input id = "newNumber"type="PhoneNumber" required>
                         <label>Enter Phone Number</label>
                     </div>
                     <button type="submit" class="btn">Save</button>
                     <button type="cancel" class="cancelBtn">Cancel</button>
+                    <span id="addContactResult"></span>
                 </form>
                 <!-- Unordered list to store entries -->
                 <ul id="contactList" class="listClass">
@@ -48,6 +49,7 @@
         </div>
 
         <script src="Signed-In/script.js"></script>
+        <script src = "code.js"></script>
 
 </body>
 </html>
