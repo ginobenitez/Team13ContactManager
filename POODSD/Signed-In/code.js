@@ -273,38 +273,19 @@ function loadContacts()
         		let lName = '';
         		let pNumber = '';
         		let email  = '';
-				const newEntry = document.createElement('li');
+				let text = ""
 				newEntry.classList.add('contact-entry');
 				
                 for (let i = 0; i < jsonObject.results.length; i++) {
                     ids[i] = jsonObject.results[i].ID
-					const fNameSpan = document.createElement('span');
-					fNameSpan.textContent = fName.value;
-					const lNameSpan = document.createElement('span');
-					lNameSpan.textContent = lName.value;
-					const pNumberSpan = document.createElement('span');
-					pNumberSpan.textContent = pNumber.value;
-					const emailSpan = document.createElement('span');
-					emailSpan.textContent = email.value;
-			
-			
-					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + jsonObject.results[i].FirstName;
-					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + jsonObject.results[i].LastName;
-					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + jsonObject.results[i].PhoneNumber;
-					emailSpan.innerHTML = "<span class='label'> Email: </span>" + jsonObject.results[i].EmailAddress;
-					
-					console.log(jsonObject.results[i].FirstName);
-					newEntry.appendChild(fNameSpan);
-					newEntry.appendChild(document.createTextNode(" "));
-					newEntry.appendChild(lNameSpan);
-					newEntry.appendChild(document.createTextNode(" "));
-					newEntry.appendChild(pNumberSpan);
-					newEntry.appendChild(document.createTextNode(" "));
-					newEntry.appendChild(emailSpan);
-			
-					listDisplay.appendChild(newEntry);
+					text+="<li>"
+					text += "<span>" + jsonObject.results[i].FirstName + "</span>";
+                    text += "<span>" + jsonObject.results[i].LastName + "</span>";
+                    text += "<span>" + jsonObject.results[i].EmailAddress + "</span>";
+                    text += "<span>" + jsonObject.results[i].PhoneNumber + "</span>";
+					text+="</li><br></br>"
                 }
-                
+					
                 document.getElementById("contactsList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
