@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cancelButton.addEventListener('click', function(e){
         e.preventDefault();
-        contactForm.style.display = 'none';
+        contactForm.style.display = 'flex';
         contactForm.reset();
     });
 
