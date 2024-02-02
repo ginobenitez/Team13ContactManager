@@ -46,6 +46,7 @@ function doLogin () {
 				
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
+				loadContacts();
 			}
 		};
 		xhr.send(jsonPayload);
@@ -98,7 +99,7 @@ function doRegister () {
 				
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
-				loadContacts();
+				
 			}
 
 			if (this.readyState == 409) 
