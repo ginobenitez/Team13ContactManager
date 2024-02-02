@@ -46,7 +46,7 @@ function doLogin () {
 				
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
-				loadContacts();
+				//loadContacts();
 			}
 		};
 		xhr.send(jsonPayload);
