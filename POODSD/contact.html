@@ -10,6 +10,7 @@
         document.addEventListener('DOMContentLoaded', function() 
         {
             readCookie();
+            loadContacts();
         }, false);
         </script>
 </head>
@@ -48,7 +49,7 @@
                         <input id = "newEmail"type="text" required>
                         <label>Enter Email</label>
                     </div>
-                    <button type="button" class="btn" onclick ="addContact();">Save</button>
+                    <button type="button" class="btn" onclick ="addContact(); ">Save</button>
                     <button type="cancel" class="cancelBtn">Cancel</button>
                     <span id="addContactResult"></span>
                 </form>
