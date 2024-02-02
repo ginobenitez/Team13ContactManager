@@ -264,6 +264,7 @@ function loadContacts()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
+				const contactForm = document.querySelector('.contact-form');
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
@@ -290,7 +291,8 @@ function loadContacts()
 					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + jsonObject.results[i].LastName;
 					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + jsonObject.results[i].PhoneNumber;
 					emailSpan.innerHTML = "<span class='label'> Email: </span>" + jsonObject.results[i].EmailAddress;
-			
+					
+					console.log(jsonObject.results[i].FirstName);
 					newEntry.appendChild(fNameSpan);
 					newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(lNameSpan);
@@ -303,6 +305,7 @@ function loadContacts()
                 }
                 
                 document.getElementById("contactList").innerHTML = text;
+				contactForm.style.display = 'flex';
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
 			}
