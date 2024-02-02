@@ -99,6 +99,11 @@ function doRegister () {
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
 			}
+
+			if (this.readyState == 409) 
+			{
+				alert("There is an account with this information already");
+			}
 		};
 		xhr.send(jsonPayload);
 	}
