@@ -265,22 +265,42 @@ function loadContacts()
 			{
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
-	
-					let text = "<table border='1'>"
+				
+				let fName = '';
+        		let lName = '';
+        		let pNumber = '';
+        		let email  = '';
+				const newEntry = document.createElement('li');
+				newEntry.classList.add('contact-entry');
+				
                 for (let i = 0; i < jsonObject.results.length; i++) {
                     ids[i] = jsonObject.results[i].ID
-                    text += "<tr id='row" + i + "'>"
-                    text += "<td id='first_Name" + i + "'><span>" + jsonObject.results[i].FirstName + "</span></td>";
-                    text += "<td id='last_Name" + i + "'><span>" + jsonObject.results[i].LastName + "</span></td>";
-                    text += "<td id='email" + i + "'><span>" + jsonObject.results[i].EmailAddress + "</span></td>";
-                    text += "<td id='phone" + i + "'><span>" + jsonObject.results[i].PhoneNumber + "</span></td>";
-                    text += "<td>" +"</td>"
-                        //"<button type='button' id='edit_button" + i + "' class='w3-button w3-circle w3-lime' onclick='edit_row(" + i + ")'>" + "<span class='glyphicon glyphicon-edit'></span>" + "</button>" +
-                        //"<button type='button' id='save_button" + i + "' value='Save' class='w3-button w3-circle w3-lime' onclick='save_row(" + i + ")' style='display: none'>" + "<span class='glyphicon glyphicon-saved'></span>" + "</button>" +
-                        //"<button type='button' onclick='delete_row(" + i + ")' class='w3-button w3-circle w3-amber'>" + "<span class='glyphicon glyphicon-trash'></span> " + "</button>" + "</td>";
-                    text += "<tr/>"
+					const fNameSpan = document.createElement('span');
+					fNameSpan.textContent = fName.value;
+					const lNameSpan = document.createElement('span');
+					lNameSpan.textContent = lName.value;
+					const pNumberSpan = document.createElement('span');
+					pNumberSpan.textContent = pNumber.value;
+					const emailSpan = document.createElement('span');
+					emailSpan.textContent = email.value;
+			
+			
+					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + jsonObject.results[i].FirstName;
+					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + jsonObject.results[i].LastName;
+					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + jsonObject.results[i].PhoneNumber;
+					emailSpan.innerHTML = "<span class='label'> Email: </span>" + jsonObject.results[i].EmailAddress;
+			
+					newEntry.appendChild(fNameSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(lNameSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(pNumberSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(emailSpan);
+			
+					listDisplay.appendChild(newEntry);
                 }
-                text += "</table>"
+                
                 document.getElementById("contactList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
