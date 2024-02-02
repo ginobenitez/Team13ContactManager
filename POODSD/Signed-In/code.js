@@ -252,6 +252,7 @@ function loadContacts()
 	let contactList = "";
 
 	let tmp = {search:srch,userId:userId};
+	alert(userId);
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/SearchContacts.' + extension;
