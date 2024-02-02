@@ -46,7 +46,7 @@ function doLogin () {
 				
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
-				//loadContacts();
+				loadContacts();
 			}
 		};
 		xhr.send(jsonPayload);
@@ -306,7 +306,6 @@ function loadContacts()
                 }
                 
                 document.getElementById("contactsList").innerHTML = text;
-				contactForm.style.display = 'flex';
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
 			}
