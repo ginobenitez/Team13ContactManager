@@ -45,7 +45,7 @@ function doLogin () {
 				saveCookie();
 				
 				window.location.href = "contact.html";
-				alert(firstName+","+lastName+"UserId:"+userId);
+				//alert(firstName+","+lastName+"UserId:"+userId);
 				loadContacts();
 			}
 		};
