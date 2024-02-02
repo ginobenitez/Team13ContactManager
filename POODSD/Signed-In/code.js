@@ -98,6 +98,7 @@ function doRegister () {
 				
 				window.location.href = "contact.html";
 				alert(firstName+","+lastName+"UserId:"+userId);
+				loadContacts();
 			}
 
 			if (this.readyState == 409) 
