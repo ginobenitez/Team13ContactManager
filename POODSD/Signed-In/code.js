@@ -265,7 +265,7 @@ function loadContacts()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				const contactForm = document.querySelector('.contact-form');
+				const listDisplay = document.getElementById('contactsList');
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
@@ -305,7 +305,7 @@ function loadContacts()
 					listDisplay.appendChild(newEntry);
                 }
                 
-                document.getElementById("contactList").innerHTML = text;
+                document.getElementById("contactsList").innerHTML = text;
 				contactForm.style.display = 'flex';
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
