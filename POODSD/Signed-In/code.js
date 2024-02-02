@@ -281,7 +281,7 @@ function loadContacts()
                     text += "<tr/>"
                 }
                 text += "</table>"
-                document.getElementById("tbody").innerHTML = text;
+                document.getElementById("contactList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
 			}
