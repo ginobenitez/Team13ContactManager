@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     const fName = document.querySelector('input[type="text"]');
     const lName = document.querySelector('input[type="LastName"]');
-    const pNumber = document.querySelector('input[type="number"]');
+    const pNumber = document.querySelector('input[type="PhoneNumber"]');
     const email = document.querySelector('input[type="email"]');
     const listDisplay = document.getElementById('contactList');
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
 
         addContact();
-        
+
         const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
 
