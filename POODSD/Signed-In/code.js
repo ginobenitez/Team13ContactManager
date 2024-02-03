@@ -314,7 +314,7 @@ function loadContacts()
 	}
 	catch(err)
 	{
-		document.getElementById("colorSearchResult").innerHTML = err.message;
+		alert("cant load contacts");
 	}
 	
 }
