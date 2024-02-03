@@ -295,5 +295,3 @@ function loadContacts()
 	}
 	
 }
-
-export { addContact};
