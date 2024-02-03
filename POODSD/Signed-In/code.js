@@ -265,7 +265,7 @@ function loadContacts()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				const listDisplay = document.getElementById('contactsList');
+				const listDisplay = document.getElementById('contactList');
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
