@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
-    const fName = document.querySelector('input[type="FirstName"]');
+    const fName = document.querySelector('input[type="text"]');
     const lName = document.querySelector('input[type="LastName"]');
-    const pNumber = document.querySelector('input[type="PhoneNumber"]');
-    const email = document.querySelector('input[type="Email"]');
+    const pNumber = document.querySelector('input[type="number"]');
+    const email = document.querySelector('input[type="email"]');
     const listDisplay = document.getElementById('contactList');
 
     const addCButton = document.querySelector('.addC');
