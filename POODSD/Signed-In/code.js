@@ -269,7 +269,7 @@ function loadContacts()
 				let jsonObject = JSON.parse( xhr.responseText );
 				
                 for (let i = 0; i < jsonObject.results.length; i++) {
-					ids[i] = jsonObject.results[i].ID
+					//ids[i] = jsonObject.results[i].ID
 					const fName = jsonObject.results[i].FirstName;
     				const lName = jsonObject.results[i].LastName;
    					const pNumber = jsonObject.results[i].PhoneNumber;
