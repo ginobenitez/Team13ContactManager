@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
+        addContact();
+        
         const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
 
@@ -44,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lName.value = '';
         pNumber.value = '';
         email.value = '';
-
-        addContact();
     });
 
     addCButton.addEventListener('click', function() {
