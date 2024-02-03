@@ -1,3 +1,4 @@
+import { addContact } from './code.js';
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     const fName = document.querySelector('input[type="FirstName"]');
@@ -44,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         lName.value = '';
         pNumber.value = '';
         email.value = '';
+
+        addContact();
     });
 
     addCButton.addEventListener('click', function() {
