@@ -46,7 +46,6 @@ function doLogin () {
 				
 				window.location.href = "contact.html";
 				//alert(firstName+","+lastName+"UserId:"+userId);
-				loadContacts();
 			}
 		};
 		xhr.send(jsonPayload);
@@ -270,12 +269,8 @@ function loadContacts()
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
-				let fName = '';
-        		let lName = '';
-        		let pNumber = '';
-        		let email  = '';
-				let text = ""
-				newEntry.classList.add('contact-entry');
+				
+				
 				
                 for (let i = 0; i < jsonObject.results.length; i++) {
                     ids[i] = jsonObject.results[i].ID
