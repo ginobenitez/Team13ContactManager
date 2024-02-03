@@ -251,7 +251,7 @@ function loadContacts()
 	let contactList = "";
 
 	let tmp = {search:srch,userId:userId};
-	alert(userId);
+	
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + '/SearchContacts.' + extension;
@@ -308,6 +308,7 @@ function loadContacts()
                 //document.getElementById("contactList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
+				alert(jsonObject.results[i].FirstName);
 			}
 		};
 		xhr.send(jsonPayload);
