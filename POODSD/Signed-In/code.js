@@ -246,7 +246,7 @@ function searchColor()
 function loadContacts()
 {
 	let srch = "";
-	document.getElementById("colorSearchResult").innerHTML = "";
+	//document.getElementById("colorSearchResult").innerHTML = "";
 	
 	let contactList = "";
 
