@@ -43,7 +43,6 @@ function doLogin () {
 				lastName = jsonObject.lastName;
 
 				saveCookie();
-				loadContacts(); 
 				window.location.href = "contact.html";
 				//alert(firstName+","+lastName+"UserId:"+userId);
 			}
