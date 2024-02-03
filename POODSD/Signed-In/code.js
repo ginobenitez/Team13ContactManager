@@ -269,20 +269,43 @@ function loadContacts()
 				//document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
-				
-				
-				
                 for (let i = 0; i < jsonObject.results.length; i++) {
-                    ids[i] = jsonObject.results[i].ID
-					text+="<li>"
-					text += "<span>" + jsonObject.results[i].FirstName + "</span>";
-                    text += "<span>" + jsonObject.results[i].LastName + "</span>";
-                    text += "<span>" + jsonObject.results[i].EmailAddress + "</span>";
-                    text += "<span>" + jsonObject.results[i].PhoneNumber + "</span>";
-					text+="</li><br></br>"
+					ids[i] = jsonObject.results[i].ID
+					const fName = jsonObject.results[i].FirstName;
+    				const lName = jsonObject.results[i].LastName;
+   					const pNumber = jsonObject.results[i].PhoneNumber;
+    				const email = jsonObject.results[i].EmailAddress;
+
+					const newEntry = document.createElement('li');
+					newEntry.classList.add('contact-entry');
+			
+					const fNameSpan = document.createElement('span');
+					fNameSpan.textContent = fName.value;
+					const lNameSpan = document.createElement('span');
+					lNameSpan.textContent = lName.value;
+					const pNumberSpan = document.createElement('span');
+					pNumberSpan.textContent = pNumber.value;
+					const emailSpan = document.createElement('span');
+					emailSpan.textContent = email.value;
+			
+			
+					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + fName.value;
+					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + lName.value;
+					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber.value;
+					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email.value;
+			
+					newEntry.appendChild(fNameSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(lNameSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(pNumberSpan);
+					newEntry.appendChild(document.createTextNode(" "));
+					newEntry.appendChild(emailSpan);
+			
+					listDisplay.appendChild(newEntry);
                 }
 					
-                document.getElementById("contactsList").innerHTML = text;
+                //document.getElementById("contactList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
 			}
