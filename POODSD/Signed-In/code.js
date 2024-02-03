@@ -294,11 +294,11 @@ function loadContacts()
 					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email.value;
 			
 					newEntry.appendChild(fNameSpan);
-					newEntry.appendChild(document.createTextNode(" "));
+					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(lNameSpan);
-					newEntry.appendChild(document.createTextNode(" "));
+					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(pNumberSpan);
-					newEntry.appendChild(document.createTextNode(" "));
+					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(emailSpan);
 			
 					listDisplay.appendChild(newEntry);
