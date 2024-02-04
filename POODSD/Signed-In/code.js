@@ -332,7 +332,8 @@ function deleteContact(firstName, lastName, userID) {
     try {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                // Contact deleted successfully
+				// debuging ...
+                console.log(http.responseText)
                 alert("Contact deleted successfully!");
             } else if (this.status == 500) {
                 // Server Error
