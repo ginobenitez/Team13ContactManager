@@ -42,8 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteButton.addEventListener('click', function() {
             const confirmed = window.confirm("Are you sure you want to delete this contact? ");
             if (confirmed) {
-                const firstName = fNameSpan.textContent;
-                const lastName = lNameSpan.textContent;
+                let firstName = fNameSpan.textContent;
+                firstName.replace("First Name: ","");
+                let lastName = lNameSpan.textContent;
+                lastName.replace("Last Name: ","");
                 deleteContact(firstName, lastName, userId);
                 newEntry.remove();
             }
