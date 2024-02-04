@@ -292,7 +292,26 @@ function loadContacts()
 					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + lName;
 					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber;
 					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email;
-			
+					
+					const editButton = document.createElement('button');
+        			editButton.className = 'edit_button';
+        			const deleteButton = document.createElement('button');
+        			deleteButton.className = 'delete_button';
+
+					editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
+					deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
+					deleteButton.addEventListener('click', function() {
+					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
+						if (confirmed) {
+							let firstName = fNameSpan.textContent;
+							firstName=firstName.replace(" First Name: ","");
+							let lastName = lNameSpan.textContent;
+							lastName=lastName.replace(" Last Name: ","");
+							deleteContact(firstName, lastName, userId);
+							newEntry.remove();
+						}
+					});
+
 					newEntry.appendChild(fNameSpan);
 					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(lNameSpan);
@@ -300,6 +319,8 @@ function loadContacts()
 					newEntry.appendChild(pNumberSpan);
 					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(emailSpan);
+					newEntry.appendChild(editButton);
+					newEntry.appendChild(deleteButton);
 			
 					listDisplay.appendChild(newEntry);
                 }
