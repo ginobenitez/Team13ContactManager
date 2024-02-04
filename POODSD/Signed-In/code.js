@@ -332,7 +332,7 @@ function loadContacts()
                 //document.getElementById("contactList").innerHTML = text;
 				
 				//document.getElementsByTagName("p")[0].innerHTML = colorList;
-				alert(jsonObject.results[i].FirstName);
+				//alert(jsonObject.results[i].FirstName);
 			}
 		};
 		xhr.send(jsonPayload);
