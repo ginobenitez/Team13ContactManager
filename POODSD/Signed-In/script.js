@@ -75,9 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
         pNumber.value = '';
         email.value = '';
 
-        window.location = window.location.href;
     });
 
+    window.location = window.location.href;
+    
     addCButton.addEventListener('click', function() {
         contactForm.style.display = 'flex';
     });
