@@ -288,10 +288,10 @@ function loadContacts()
 					emailSpan.textContent = email.value;
 			
 			
-					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + fName.value;
-					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + lName.value;
-					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber.value;
-					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email.value;
+					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + fName;
+					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + lName;
+					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber;
+					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email;
 			
 					newEntry.appendChild(fNameSpan);
 					//newEntry.appendChild(document.createTextNode(" "));
