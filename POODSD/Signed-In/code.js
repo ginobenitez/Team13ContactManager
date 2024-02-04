@@ -333,7 +333,7 @@ function deleteContact(firstName, lastName, userID) {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
 				// debuging ...
-                console.log(http.responseText)
+                console.log(console.log(xhr.response));
                 alert("Contact deleted successfully!");
             } else if (this.status == 500) {
                 // Server Error
