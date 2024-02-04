@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        
+        editButton.addEventListener('click', function(){
+            contactForm.style.display='flex';
+        })
 
         newEntry.appendChild(fNameSpan);
         newEntry.appendChild(document.createTextNode(" "));
@@ -83,9 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
     });
 
-    editButton.addEventListener('click', function(){
-        contactForm.style.display='flex';
-    })
+    
     
 
 
