@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteButton.addEventListener('click', function() {
             const confirmed = window.confirm("Are you sure you want to delete this contact? ");
             if (confirmed) {
-                const contactId = newEntry.dataset.contactId;
                 const firstName = fNameSpan.textContent;
                 const lastName = lNameSpan.textContent;
-                deleteContact(firstName, lastName, contactId);
+                window.confirm("Deleting  from ID: " + userId);
+                deleteContact(firstName, lastName, userId);
                 newEntry.remove();
             }
         });
