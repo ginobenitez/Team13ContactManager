@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
         pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber.value;
         emailSpan.innerHTML = "<span class='label'> Email: </span>" + email.value;
 
+        const editButton = document.createElement('button');
+        editButton.className = 'edit_button';
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete_button';
+
+        editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
+        deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
+
+        
+
         newEntry.appendChild(fNameSpan);
         newEntry.appendChild(document.createTextNode(" "));
         newEntry.appendChild(lNameSpan);
@@ -39,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
         newEntry.appendChild(pNumberSpan);
         newEntry.appendChild(document.createTextNode(" "));
         newEntry.appendChild(emailSpan);
+        newEntry.appendChild(document.createTextNode(" "));
+        newEntry.appendChild(editButton);
+        newEntry.appendChild(document.createTextNode(" "));
+        newEntry.appendChild(deleteButton);
 
         listDisplay.appendChild(newEntry);
 
