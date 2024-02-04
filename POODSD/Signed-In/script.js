@@ -69,12 +69,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         listDisplay.appendChild(newEntry);
 */
-        window.location = window.location.href;
-        
+
         fName.value = '';
         lName.value = '';
         pNumber.value = '';
         email.value = '';
+
+        window.location = window.location.href;
     });
 
     addCButton.addEventListener('click', function() {
