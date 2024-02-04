@@ -318,3 +318,29 @@ function loadContacts()
 	}
 	
 }
+
+function deleteContact(firstName, lastName, userID) {
+    let contactInfo = { firstName: firstName, lastName: lastName, UserID: userID };
+    let jsonPayload = JSON.stringify(contactInfo);
+
+    let url = urlBase + '/DeleteContact.' + extension;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    try {
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // Contact deleted successfully
+                alert("Contact deleted successfully!");
+            } else if (this.status == 500) {
+                // Server Error
+                alert("Server Error");
+            }
+        };
+        xhr.send(jsonPayload);
+    } catch (err) {
+        alert(err.message);
+    }
+}

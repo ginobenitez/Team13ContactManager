@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
-
+        
         const fNameSpan = document.createElement('span');
         fNameSpan.textContent = fName.value;
         const lNameSpan = document.createElement('span');
@@ -39,6 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
         deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
+        deleteButton.addEventListener('click', function() {
+            const confirmed = window.confirm("Are you sure you want to delete this contact? ");
+            if (confirmed) {
+                
+                const contactId = newEntry.dataset.contactId;
+                const firstName = newEntry.querySelector('.label-first-name').textContent.trim();
+                const lastName = newEntry.querySelector('.label-last-name').textContent.trim();
+                deleteContact(firstName, lastName, contactId);
+                newEntry.remove();
+            }
+        });
 
         
 
@@ -71,6 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.style.display = 'none';
         contactForm.reset();
     });
+
+    
+    
 
 
 
