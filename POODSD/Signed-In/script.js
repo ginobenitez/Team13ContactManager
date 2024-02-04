@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         addContact();
 
-        const newEntry = document.createElement('li');
+        /*const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
         
         const fNameSpan = document.createElement('span');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newEntry.appendChild(document.createTextNode(" "));
         newEntry.appendChild(deleteButton);
 
-        listDisplay.appendChild(newEntry);
+        listDisplay.appendChild(newEntry);*/
 
 
         fName.value = '';
