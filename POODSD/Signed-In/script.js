@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pNumber.value = '';
         email.value = '';
 
-        loadContacts();
+       location.reload();
     });
 
 
