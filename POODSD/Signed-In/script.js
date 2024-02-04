@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
     });
 
-    
+    editButton.addEventListener('click', function(){
+        contactForm.style.display='flex';
+    })
     
 
 
