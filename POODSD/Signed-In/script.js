@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (confirmed) {
                 const firstName = fNameSpan.textContent;
                 const lastName = lNameSpan.textContent;
-                window.confirm("Deleting  from ID: " + userId);
                 deleteContact(firstName, lastName, userId);
                 newEntry.remove();
             }
