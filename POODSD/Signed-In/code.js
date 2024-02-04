@@ -272,8 +272,8 @@ function loadContacts()
 					//ids[i] = jsonObject.results[i].ID
 					const fName = jsonObject.results[i].FirstName;
     				const lName = jsonObject.results[i].LastName;
-   					const pNumber = jsonObject.results[i].PhoneNumber;
-    				const email = jsonObject.results[i].EmailAddress;
+   					const pNumber = jsonObject.results[i].Phone;
+    				const email = jsonObject.results[i].Email;
 
 					const newEntry = document.createElement('li');
 					newEntry.classList.add('contact-entry');
