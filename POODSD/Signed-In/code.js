@@ -338,7 +338,7 @@ function loadContacts()
 			
 			
 					fNameSpan.innerHTML = "<span  class='label'> First Name: </span> <p id = 'FirstName"+i+"'>" + fName+"</p>";
-					lNameSpan.innerHTML = "<span  class='label'> Last Name: </span> <p id = 'LasttName"+i+"'>" + lName+"</p>";
+					lNameSpan.innerHTML = "<span  class='label'> Last Name: </span> <p id = 'LastName"+i+"'>" + lName+"</p>";
 					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span> <p id = 'PhoneNumber"+i+"'>" + pNumber+"</p>";
 					emailSpan.innerHTML = "<span  class='label'> Email: </span> <p id = 'EmailAddress"+i+"'>" + email+"</p>";
 					
