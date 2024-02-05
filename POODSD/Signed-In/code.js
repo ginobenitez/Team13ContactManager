@@ -199,13 +199,13 @@ function addContact()
 }
 function updateContact(id){
 
-	let name = document.getElementById("nameFirst" + id).value;
-    let last = document.getElementById("nameLast" + id).value;
-    let email = document.getElementById("emailaddress" + id).value;
-    let phone = document.getElementById("phonenumber" + id).value;
-    let ID = ids[id];
+	const name = document.getElementById("nameFirst" + id).value;
+    const last = document.getElementById("nameLast" + id).value;
+    const email = document.getElementById("emailaddress" + id).value;
+    const phone = document.getElementById("phonenumber" + id).value;
+    const ID = ids[id];
 
-	document.getElementById("first_Name" + ID).innerHTML = name.value;;
+	document.getElementById("first_Name" + ID).innerHTML = name.value;
     document.getElementById("last_Name" + ID).innerHTML = last.value;
     document.getElementById("email" + ID).innerHTML = email.value;
     document.getElementById("phone" + ID).innerHTML = phone.value;
