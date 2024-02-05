@@ -203,15 +203,15 @@ function updateContact(id){
     let last = document.getElementById("namel_text" + id).value;
     let email = document.getElementById("email_text" + id).value;
     let phone = document.getElementById("phone_text" + id).value;
-    let id = ids[id];
+    let ID = ids[id];
 
-	document.getElementById("first_Name" + id).innerHTML = name;
-    document.getElementById("last_Name" + id).innerHTML = last;
-    document.getElementById("email" + id).innerHTML = email;
-    document.getElementById("phone" + id).innerHTML = phone;
+	document.getElementById("first_Name" + ID).innerHTML = name;
+    document.getElementById("last_Name" + ID).innerHTML = last;
+    document.getElementById("email" + ID).innerHTML = email;
+    document.getElementById("phone" + ID).innerHTML = phone;
 
 	let tmp = {
-		"ID": id,
+		"ID": ID,
 		"firstName": name,
 		"lastName": last,
 		"phone": phone,
