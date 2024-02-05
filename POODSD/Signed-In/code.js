@@ -205,14 +205,10 @@ function updateContact(id){
     const phone = document.getElementById("phonenumber" + id).value;
     const ID = ids[id];
 
-	document.getElementById("FirstName" + ID).innerHTML = 
-	"<span  class='label'> First Name: </span> <p id = 'FirstName"+id+"'>" + name+"</p>";
-    document.getElementById("LastName" + ID).innerHTML = 
-	"<span  class='label'> Last Name: </span> <p id = 'LastName"+id+"'>" + last+"</p>";
-    document.getElementById("EmailAddress" + ID).innerHTML = 
-	"<span  class='label'> Email Address: </span> <p id = 'EmailAdress"+id+"'>" + email+"</p>";
-    document.getElementById("PhoneNumber" + ID).innerHTML = 
-	"<span  class='label'> Phone Number: </span> <p id = 'PhoneNumber"+id+"'>" + phone+"</p>";
+	document.getElementById("FirstName" + ID).innerHTML = "<span  class='label'> First Name: </span> <p id = 'FirstName"+id+"'>" + name+"</p>";
+    document.getElementById("LastName" + ID).innerHTML = "<span  class='label'> Last Name: </span> <p id = 'LastName"+id+"'>" + last+"</p>";
+    document.getElementById("EmailAddress" + ID).innerHTML = "<span  class='label'> Email Address: </span> <p id = 'EmailAdress"+id+"'>" + email+"</p>";
+    document.getElementById("PhoneNumber" + ID).innerHTML = "<span  class='label'> Phone Number: </span> <p id = 'PhoneNumber"+id+"'>" + phone+"</p>";
 
 	let tmp = {
 		"ID": ID,
