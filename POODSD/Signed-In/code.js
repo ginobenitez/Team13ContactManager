@@ -149,7 +149,7 @@ function readCookie()
 		window.location.href = "index.html";
 	}
 	else{
-		document.getElementById('heading').innerHTML="<h2 id = 'heading'>"+FirstName+" "+LastName+"'s Contact List</h2>";
+		document.getElementById('heading').innerHTML="<h2 id = 'heading'>"+firstName+" "+lastName+"'s Contact List</h2>";
 	}
 	/*else
 	{
