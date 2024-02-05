@@ -230,8 +230,8 @@ function updateContact(id){
             if (this.readyState == 4 && this.status == 200) {
                 alert("Contact has been updated");
 				
-				document.getElementById("editButton"+id).style.display = "inline-block";
-        		document.getElementById("saveEditButton"+id).style.display = "none";
+				document.getElementById("editButton"+id).style.visibility = "visible";
+        		document.getElementById("saveEditButton"+id).style.visibility = "hidden";
 
                 location.reload();
             }
@@ -243,8 +243,8 @@ function updateContact(id){
 
 }
 function editContact(id){
-    document.getElementById("editButton"+id).style.display = "none";
-    document.getElementById("saveEditButton"+id).style.display = "inline-block";
+    document.getElementById("editButton"+id).style.visibilityx = "hidden";
+    document.getElementById("saveEditButton"+id).style.display = "visible";
     let firstName = document.getElementById("FirstName" + id);
     let lastName = document.getElementById("LastName" + id);
     let email = document.getElementById("EmailAddress" + id);
@@ -371,7 +371,7 @@ function loadContacts()
 
 					editButton.innerHTML = "<i id = 'editButton"+i+"' class='fa fa-edit' onclick ='editContact(" + i + ")' style= 'font-size:20px'; color:'blue'></i>";
 					deleteButton.innerHTML = "<i id = 'deleteButton"+i+"' class='fa fa-trash-o' style= 'font-size:20px'; color:'red'></i>";
-					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
+					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='visibility: hidden' color:'green'>";
 					deleteButton.addEventListener('click', function() {
 					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
 						if (confirmed) {
