@@ -89,28 +89,25 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
     });
 
-    function editContact(id){
-        document.getElementById("editButton"+id).style.display = "none";
-        document.getElementById("saveEditButton"+id).style.display = "inline-block";
-        let firstName = document.getElementById("FirstName" + id);
-        let lastName = document.getElementById("LastName" + id);
-        let email = document.getElementById("EmailAddress" + id);
-        let phone = document.getElementById("PhoneNumber" + id);
-
-        let name_data = firstName.innerText;
-        let namel_data = lastName.innerText;
-        let email_data = email.innerText;
-        let phone_data = phone.innerText;
-
-        firstName.innerHTML = "<input type='text' id='nameFirst" + id + "' value='" + name_data + "'>";
-        lastName.innerHTML = "<input type='text' id='nameLast" + id + "' value='" + namel_data + "'>";
-        email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "'>";
-        phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "'>"
-
-    };
-    
-
-
-
 
 });
+
+function editContact(id){
+    document.getElementById("editButton"+id).style.display = "none";
+    document.getElementById("saveEditButton"+id).style.display = "inline-block";
+    let firstName = document.getElementById("FirstName" + id);
+    let lastName = document.getElementById("LastName" + id);
+    let email = document.getElementById("EmailAddress" + id);
+    let phone = document.getElementById("PhoneNumber" + id);
+
+    let name_data = firstName.innerText;
+    let namel_data = lastName.innerText;
+    let email_data = email.innerText;
+    let phone_data = phone.innerText;
+
+    firstName.innerHTML = "<input type='text' id='nameFirst" + id + "' value='" + name_data + "'>";
+    lastName.innerHTML = "<input type='text' id='nameLast" + id + "' value='" + namel_data + "'>";
+    email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "'>";
+    phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "'>"
+
+};
