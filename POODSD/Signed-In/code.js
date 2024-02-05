@@ -5,6 +5,7 @@ const loginButton = document.getElementById("loginBtn")
 let userId = 0;
 let firstName = "";
 let lastName = "";
+const ids = [];
 
 function doLogin () {
 	
@@ -196,7 +197,51 @@ function addContact()
 	}
 	
 }
+function updateContact(id){
 
+	let name = document.getElementById("namef_text" + id).value;
+    let last = document.getElementById("namel_text" + id).value;
+    let email = document.getElementById("email_text" + id).value;
+    let phone = document.getElementById("phone_text" + id).value;
+    let id = ids[id];
+
+	document.getElementById("first_Name" + id).innerHTML = name;
+    document.getElementById("last_Name" + id).innerHTML = last;
+    document.getElementById("email" + id).innerHTML = email;
+    document.getElementById("phone" + id).innerHTML = phone;
+
+	let tmp = {
+		"ID": id,
+		"firstName": name,
+		"lastName": last,
+		"phone": phone,
+		"email": email
+	  };
+	let jsonPayload = JSON.stringify(tmp);
+
+    let url = urlBase + '/UpdateContact.' + extension;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+	try {
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                alert("Contact has been updated");
+				
+				document.getElementById("editButton"+id).style.display = "inline-block";
+        		document.getElementById("saveEditButton"+id).style.display = "none";
+
+                location.reload();
+            }
+        };
+        xhr.send(jsonPayload);
+    } catch (err) {
+        console.log(err.message);
+    }
+
+}
 function searchContact()
 {
 	let srch = document.getElementById("searchText").value;
@@ -273,7 +318,7 @@ function loadContacts()
 				let jsonObject = JSON.parse( xhr.responseText );
 				
                 for (let i = 0; i < jsonObject.results.length; i++) {
-					//ids[i] = jsonObject.results[i].ID
+					ids[i] = jsonObject.results[i].ID
 					const fName = jsonObject.results[i].FirstName;
     				const lName = jsonObject.results[i].LastName;
    					const pNumber = jsonObject.results[i].Phone;
@@ -292,18 +337,21 @@ function loadContacts()
 					emailSpan.textContent = email.value;
 			
 			
-					fNameSpan.innerHTML = "<span class='label'> First Name: </span>" + fName;
-					lNameSpan.innerHTML = "<span class='label'> Last Name: </span>" + lName;
-					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span>" + pNumber;
-					emailSpan.innerHTML = "<span class='label'> Email: </span>" + email;
+					fNameSpan.innerHTML = "<span id = 'FirstName"+i+"' class='label'> First Name: </span>" + fName;
+					lNameSpan.innerHTML = "<span id = 'LastName"+i+"' class='label'> Last Name: </span>" + lName;
+					pNumberSpan.innerHTML = "<span id = 'PhoneNumber"+i+"' class='label'> Phone Number: </span>" + pNumber;
+					emailSpan.innerHTML = "<span id = 'EmailAddress"+i+"' class='label'> Email: </span>" + email;
 					
 					const editButton = document.createElement('button');
         			editButton.className = 'edit_button';
         			const deleteButton = document.createElement('button');
         			deleteButton.className = 'delete_button';
+					const saveEditButton = document.createElement('button');
+        			saveEditButton.className = 'save_edit_button';
 
-					editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
-					deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
+					editButton.innerHTML = "<i id = 'editButton"+i+"' class='fa fa-edit' onclick ='editContact(" + i + ")' style= 'font-size:20px'; color:'blue'></i>";
+					deleteButton.innerHTML = "<i id = 'deleteButton"+i+"' class='fa fa-trash-o' style= 'font-size:20px'; color:'red'></i>";
+					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
 					deleteButton.addEventListener('click', function() {
 					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
 						if (confirmed) {
@@ -325,6 +373,7 @@ function loadContacts()
 					newEntry.appendChild(emailSpan);
 					newEntry.appendChild(editButton);
 					newEntry.appendChild(deleteButton);
+					newEntry.appendChild(saveEditButton);
 			
 					listDisplay.appendChild(newEntry);
                 }
