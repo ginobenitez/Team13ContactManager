@@ -205,10 +205,10 @@ function updateContact(id){
     const phone = document.getElementById("phonenumber" + id).value;
     const ID = ids[id];
 
-	document.getElementById("first_Name" + ID).innerHTML = name;//.value;
-    document.getElementById("last_Name" + ID).innerHTML = last;//.value;
-    document.getElementById("email" + ID).innerHTML = email;//.value;
-    document.getElementById("phone" + ID).innerHTML = phone;//.value;
+	document.getElementById("first_Name" + ID).innerText = name;//.value;
+    document.getElementById("last_Name" + ID).innerText = last;//.value;
+    document.getElementById("email" + ID).innerText = email;//.value;
+    document.getElementById("phone" + ID).innerText = phone;//.value;
 
 	let tmp = {
 		"ID": ID,
