@@ -199,10 +199,10 @@ function addContact()
 }
 function updateContact(id){
 
-	let name = document.getElementById("namef_text" + id).value;
-    let last = document.getElementById("namel_text" + id).value;
-    let email = document.getElementById("email_text" + id).value;
-    let phone = document.getElementById("phone_text" + id).value;
+	let name = document.getElementById("nameFirst" + id).value;
+    let last = document.getElementById("nameLast" + id).value;
+    let email = document.getElementById("emaileddress" + id).value;
+    let phone = document.getElementById("phonenumber" + id).value;
     let ID = ids[id];
 
 	document.getElementById("first_Name" + ID).innerHTML = name;
@@ -337,10 +337,10 @@ function loadContacts()
 					emailSpan.textContent = email.value;
 			
 			
-					fNameSpan.innerHTML = "<span id = 'FirstName"+i+"' class='label'> First Name: </span>" + fName;
-					lNameSpan.innerHTML = "<span id = 'LastName"+i+"' class='label'> Last Name: </span>" + lName;
-					pNumberSpan.innerHTML = "<span id = 'PhoneNumber"+i+"' class='label'> Phone Number: </span>" + pNumber;
-					emailSpan.innerHTML = "<span id = 'EmailAddress"+i+"' class='label'> Email: </span>" + email;
+					fNameSpan.innerHTML = "<span  class='label'> First Name: </span> <p id = 'FirstName"+i+"'>" + fName+"</p>";
+					lNameSpan.innerHTML = "<span  class='label'> Last Name: </span> <p id = 'LasttName"+i+"'>" + lName+"</p>";
+					pNumberSpan.innerHTML = "<span class='label'> Phone Number: </span> <p id = 'PhoneNumber"+i+"'>" + pNumber+"</p>";
+					emailSpan.innerHTML = "<span  class='label'> Email: </span> <p id = 'EmailAddress"+i+"'>" + email+"</p>";
 					
 					const editButton = document.createElement('button');
         			editButton.className = 'edit_button';
