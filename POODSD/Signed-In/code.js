@@ -201,7 +201,7 @@ function updateContact(id){
 
 	let name = document.getElementById("nameFirst" + id).value;
     let last = document.getElementById("nameLast" + id).value;
-    let email = document.getElementById("emaileddress" + id).value;
+    let email = document.getElementById("emailaddress" + id).value;
     let phone = document.getElementById("phonenumber" + id).value;
     let ID = ids[id];
 
