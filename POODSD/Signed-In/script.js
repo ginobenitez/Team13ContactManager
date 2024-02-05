@@ -105,9 +105,9 @@ function editContact(id){
     let email_data = email.innerText;
     let phone_data = phone.innerText;
 
-    firstName.innerHTML = "<input class = 'contact-form' type='text' id='nameFirst" + id + "' value='" + name_data + "'>";
-    lastName.innerHTML = "<input class = 'contact-form' type='text' id='nameLast" + id + "' value='" + namel_data + "'>";
-    email.innerHTML = "<input class = 'contact-form' type='text' id='emailaddress" + id + "' value='" + email_data + "'>";
-    phone.innerHTML = "<input class = 'contact-form' type='text' id='phonenumber" + id + "' value='" + phone_data + "'>";
+    firstName.innerHTML = "<input class = 'input-box' type='text' id='nameFirst" + id + "' value='" + name_data + "'>";
+    lastName.innerHTML = "<input class = 'input-box' type='text' id='nameLast" + id + "' value='" + namel_data + "'>";
+    email.innerHTML = "<input class = 'input-box' type='text' id='emailaddress" + id + "' value='" + email_data + "'>";
+    phone.innerHTML = "<input class = 'input-box' type='text' id='phonenumber" + id + "' value='" + phone_data + "'>";
 
 };
