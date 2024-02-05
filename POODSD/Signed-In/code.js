@@ -148,6 +148,9 @@ function readCookie()
 	{
 		window.location.href = "index.html";
 	}
+	else{
+		document.getElementById('heading').innerHTML="<h2 id = 'heading'>"+FirstName+" "+LastName+"'s Contact List</h2>";
+	}
 	/*else
 	{
 		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
