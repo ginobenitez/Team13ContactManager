@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pNumber.value = '';
         email.value = '';
 
-       location.reload();
+       //location.reload();
     });
 
 
