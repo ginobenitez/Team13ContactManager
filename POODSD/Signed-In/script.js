@@ -75,11 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
         lName.value = '';
         pNumber.value = '';
         email.value = '';
-
+        contactForm.style.display = 'none';
+        
        //location.reload();
     });
 
-
+    
     addCButton.addEventListener('click', function() {
         contactForm.style.display = 'flex';
     });
