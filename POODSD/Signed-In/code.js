@@ -174,7 +174,7 @@ function addContact()
 	let newEmail = document.getElementById("newEmail").value;
 	document.getElementById("addContactResult").innerHTML = "";
 	
-	let formattedNumber = newNumber.replace('-',""); 
+	let formatedNumber = newNumber.replace('-',""); 
 	newNumber= formatedNumber.split(" ").join("");
 	let tmp = {firstName:newFirst,lastName:newLast,phone:newNumber,email:newEmail,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
