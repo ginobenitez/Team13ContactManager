@@ -389,6 +389,7 @@ function loadContacts()
 						}
 					});
 
+					newEntry.appendChild(newImage);
 					newEntry.appendChild(fNameSpan);
 					//newEntry.appendChild(document.createTextNode(" "));
 					newEntry.appendChild(lNameSpan);
@@ -400,7 +401,7 @@ function loadContacts()
 					newEntry.appendChild(deleteButton);
 					newEntry.appendChild(saveEditButton);
 					
-					listDisplay.appendChild(newImage);
+					
 					listDisplay.appendChild(newEntry);
                 }
 					
