@@ -346,7 +346,9 @@ function loadContacts()
     				const lName = jsonObject.results[i].LastName;
    					const pNumber = jsonObject.results[i].Phone;
     				const email = jsonObject.results[i].Email;
-
+					const newImage= document.createElement('img');
+					newImage.classList.add('contact-Image');
+					newImage.innerHTML = "<img class ='contactImage' src = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXY0YXhrODg5d2xjdjhpdTNvNzVkem0wYTB6b2VlYmRzZTF0N3c4cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5FVtsLf6g9QOqIakxw/giphy.gif'>"
 					const newEntry = document.createElement('li');
 					newEntry.classList.add('contact-entry');
 			
@@ -397,7 +399,8 @@ function loadContacts()
 					newEntry.appendChild(editButton);
 					newEntry.appendChild(deleteButton);
 					newEntry.appendChild(saveEditButton);
-			
+					
+					listDisplay.appendChild(newImage);
 					listDisplay.appendChild(newEntry);
                 }
 					

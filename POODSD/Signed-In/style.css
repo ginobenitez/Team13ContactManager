@@ -262,5 +262,12 @@ header {
     margin: 5px 0;
     box-sizing: border-box;
 }
-
+.contactImage{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid black;
+    vertical-align: middle;
+    margin: 0 auto;
+}
 
