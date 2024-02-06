@@ -267,7 +267,7 @@ header {
     width: 120px;
     border-radius: 50%;
     border: 1px solid black;
-    vertical-align: middle;
+    vertical-align: text-bottom;
     margin: 0 auto;
 }
 
