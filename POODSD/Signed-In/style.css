@@ -249,7 +249,7 @@ header {
 
 .listClass {
     overflow-y: scroll;
-    max-height: 1200px;
+    max-height: 1000px;
 }
 
 .search-box {
