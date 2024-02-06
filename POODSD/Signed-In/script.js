@@ -90,5 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
     });
 
+    
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        var searchQuery = this.value.toLowerCase();
+        var contactListItems = document.getElementById('contactList').getElementsByTagName('li');
+
+          Array.from(contactListItems).forEach(function(item) {
+               var itemName = item.textContent || item.innerText;
+               if (itemName.toLowerCase().indexOf(searchQuery) !== -1) {
+                   item.style.display = ''; // Show matching item
+                 } else {
+                       item.style.display = 'none'; // Hide non-matching item
+        }
+    });
+ });
 });
 
