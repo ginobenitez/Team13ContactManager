@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         addContact();
 
-        const newEntry = document.createElement('li');
+        /*const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
         
         const fNameSpan = document.createElement('span');
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteButton.className = 'delete_button';
         const saveEditButton = document.createElement('button');
         saveEditButton.className = 'save_edit_button';
-        
+
         editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
         deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
-        saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
+        saveEditButton.innerHTML ="<i id= 'saveEditButton'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
 
 
         deleteButton.addEventListener('click', function() {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newEntry.appendChild(saveEditButton);
 
         listDisplay.appendChild(newEntry);
-
+        */
 
         fName.value = '';
         lName.value = '';
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         email.value = '';
         contactForm.style.display = 'none';
 
-       //location.reload();
+       location.reload();
     });
 
     
