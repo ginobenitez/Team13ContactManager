@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         addContact();
 
-        /*const newEntry = document.createElement('li');
+        const newEntry = document.createElement('li');
         newEntry.classList.add('contact-entry');
         
         const fNameSpan = document.createElement('span');
@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
         deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
+        saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
+
+        const saveEditButton = document.createElement('button');
+        saveEditButton.className = 'save_edit_button';
+
         deleteButton.addEventListener('click', function() {
             const confirmed = window.confirm("Are you sure you want to delete this contact? ");
             if (confirmed) {
@@ -67,8 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
         newEntry.appendChild(editButton);
         newEntry.appendChild(document.createTextNode(" "));
         newEntry.appendChild(deleteButton);
+        newEntry.appendChild(document.createTextNode(" "));
+        newEntry.appendChild(saveEditButton);
 
-        listDisplay.appendChild(newEntry);*/
+        listDisplay.appendChild(newEntry);
 
 
         fName.value = '';
@@ -76,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pNumber.value = '';
         email.value = '';
         contactForm.style.display = 'none';
-        
+
        //location.reload();
     });
 
