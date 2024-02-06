@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
         editButton.className = 'edit_button';
         const deleteButton = document.createElement('button');
         deleteButton.className = 'delete_button';
-
+        const saveEditButton = document.createElement('button');
+        saveEditButton.className = 'save_edit_button';
+        
         editButton.innerHTML = '<i class="fa fa-edit" style="font-size:20px; color:blue"></i>';
         deleteButton.innerHTML = '<i class="fa fa-trash-o" style="font-size:20px; color:red"></i>';
         saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
 
-        const saveEditButton = document.createElement('button');
-        saveEditButton.className = 'save_edit_button';
 
         deleteButton.addEventListener('click', function() {
             const confirmed = window.confirm("Are you sure you want to delete this contact? ");
