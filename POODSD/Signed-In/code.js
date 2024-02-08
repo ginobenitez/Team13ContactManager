@@ -1,4 +1,4 @@
-const urlBase = 'http://reachout-hub.com/LAMPAPI';
+const urlBase = 'http://naturalconnections.site/LAMPAPI/';
 const extension = 'php';
 const loginForm = document.querySelector('loginForm');
 const loginButton = document.getElementById("loginBtn")
