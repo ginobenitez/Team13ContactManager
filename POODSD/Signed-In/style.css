@@ -264,6 +264,37 @@ header {
     display: none;
 }
 
+.fa {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.fa-edit {
+    color: #0ef;
+}
+
+.fa-edit:hover {
+    color: #0cd;
+}
+
+.fa-trash-o {
+    color: #F44336;
+}
+
+.fa-trash-o:hover {
+    color: #D32F2F;
+}
+
+.fa-check {
+    color: #4CAF50;
+}
+
+.fa-check:hover {
+    color: #388E3C;
+}
+
 .listClass {
     overflow-y: scroll;
     max-height: 800px;
