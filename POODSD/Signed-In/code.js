@@ -249,11 +249,16 @@ function updateContact(id){
 }
 function editContact(id){
     document.getElementById("editButton"+id).style.display = "none";
+	document.getElementById("deleteButton"+id).style.display = "none";
+	document.getElementById("cancelEditButton"+id).style.display = "inline-block";
     document.getElementById("saveEditButton"+id).style.display = "inline-block";
+
     let firstName = document.getElementById("FirstName" + id);
     let lastName = document.getElementById("LastName" + id);
     let email = document.getElementById("EmailAddress" + id);
     let phone = document.getElementById("PhoneNumber" + id);
+
+
 
     let name_data = firstName.innerText;
     let namel_data = lastName.innerText;
@@ -266,6 +271,20 @@ function editContact(id){
     lastName.innerHTML = "<input type='text' id='nameLast" + id + "' value='" + namel_data + "' style='" + inputStyle + "'>";
     email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "' style='" + inputStyle + "'>";
     phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "' style='" + inputStyle + "'>";
+
+	if(document.getElementById('cancelEditbutton').clicked == true)
+		{
+			document.getElementById("editButton"+id).style.display = "inline-Block";
+			document.getElementById("cancelEditButton"+id).style.display = "none";
+    		document.getElementById("saveEditButton"+id).style.display = "none";
+			document.getElementById("deleteButton"+id).style.display = "inline-block";
+			
+			firstName.innerHTML = "<p id = 'FirstName"+i+"'>" + firstName.innerText+"</p>";
+			lastName.innerHTML = "<p id = 'LastName"+i+"'>" + lastName.innerText+"</p>";
+			email.innerHTML = " <p id = 'PhoneNumber"+i+"'>" + email.innerText+"</p>";
+			phone.innerHTML = "<p id = 'EmailAddress"+i+"'>" + phone.innerText+"</p>";
+
+		}
 
 };
 
@@ -377,10 +396,14 @@ function loadContacts()
         			deleteButton.className = 'delete_button';
 					const saveEditButton = document.createElement('button');
         			saveEditButton.className = 'save_edit_button';
+					const cancelEditButton = document.createElement('button');
+        			cancelEditButton.className = 'cancel_edit_button';
 
 					editButton.innerHTML = "<i id = 'editButton"+i+"' class='fa fa-edit' onclick ='editContact(" + i + ")' style= 'font-size:20px'; color:'blue'></i>";
 					deleteButton.innerHTML = "<i id = 'deleteButton"+i+"' class='fa fa-trash-o' style= 'font-size:20px'; color:'red'></i>";
 					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none' color:'green'>";
+					
+					cancelEditButton.innerHTML ="<i id= 'cancelEditButton" + i + "'class='fa-solid fa-xmark' style='display: none' color:'red'>";
 					deleteButton.addEventListener('click', function() {
 					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
 						if (confirmed) {
@@ -404,6 +427,7 @@ function loadContacts()
 					newEntry.appendChild(editButton);
 					newEntry.appendChild(deleteButton);
 					newEntry.appendChild(saveEditButton);
+					newEntry.appendChild(cancelEditButton);
 					
 					
 					listDisplay.appendChild(newEntry);
