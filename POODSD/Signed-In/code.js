@@ -407,9 +407,9 @@ function loadContacts()
 
 					editButton.innerHTML = "<i id = 'editButton"+i+"' class='fa fa-edit' onclick ='editContact(" + i + ")' style= 'font-size:20px'; color:'blue'></i>";
 					deleteButton.innerHTML = "<i id = 'deleteButton"+i+"' class='fa fa-trash-o' style= 'font-size:20px'; color:'red'></i>";
-					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none font-size:20px' color:'green'>";
+					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none; font-size:20px;' color:'green'>";
 					
-					cancelEditButton.innerHTML ="<i id= 'cancelEditButton" + i + "'class='fa fa-times' style='display: none font-size:20px' color:'red'>";
+					cancelEditButton.innerHTML ="<i id= 'cancelEditButton" + i + "'class='fa fa-times' style='display: none; font-size:20px;' color:'red'>";
 					deleteButton.addEventListener('click', function() {
 					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
 						if (confirmed) {
