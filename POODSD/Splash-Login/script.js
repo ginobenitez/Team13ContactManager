@@ -9,6 +9,25 @@ const closeRegister = document.querySelector('[type="register-close"]');
 const loadCircle = document.querySelector('.load-circle');
 const loadOval = document.querySelector('.load-oval');
 
+// BEGIN EDIT FOR SPLASH TEXT
+document.addEventListener('DOMContentLoaded', function() {
+    const welcomeText = document.querySelector('.welcome-text');
+
+    btnPopup.addEventListener('click', () => {
+        welcomeText.style.display = 'none';
+    });
+
+    closeLogin.addEventListener('click', () => {
+        welcomeText.style.display = 'block';
+    });
+
+    closeRegister.addEventListener('click', () => {
+        welcomeText.style.display = 'block';
+    });
+});
+// END EDIT FOR SPLASH TEXT
+
+
 signupLink.addEventListener('click', ()=> {
     wrapper.classList.add('active');
     loadCircle.style.display = 'none';
