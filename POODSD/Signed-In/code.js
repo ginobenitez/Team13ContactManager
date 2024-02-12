@@ -286,8 +286,8 @@ function editContact(id){
 			
 			firstName.innerHTML = "<p id = 'FirstName"+id+"'>" + originFirst+"</p>";
 			lastName.innerHTML = "<p id = 'LastName"+id+"'>" + originLast+"</p>";
-			email.innerHTML = " <p id = 'PhoneNumber"+id+"'>" + originEmail+"</p>";
-			phone.innerHTML = "<p id = 'EmailAddress"+id+"'>" + originPhone+"</p>";
+			email.innerHTML = " <p id = 'EmailAddress"+id+"'>" + originEmail+"</p>";
+			phone.innerHTML = "<p id = 'PhoneNumber"+id+"'>" + originPhone+"</p>";
 
 		});
 
