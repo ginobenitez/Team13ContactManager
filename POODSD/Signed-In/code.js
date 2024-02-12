@@ -260,6 +260,11 @@ function editContact(id){
 
 
 
+	let originFirst = firstName.innerText;
+	let originLast = lastName.innerText;
+	let originEmail = email.innerText;
+	let originPhone = phone.innerText;
+
     let name_data = firstName.innerText;
     let namel_data = lastName.innerText;
     let email_data = email.innerText;
@@ -279,10 +284,10 @@ function editContact(id){
     		document.getElementById("saveEditButton"+id).style.display = "none";
 			document.getElementById("deleteButton"+id).style.display = "inline-block";
 			
-			firstName.innerHTML = "<p id = 'FirstName"+id+"'>" + firstName.innerText+"</p>";
-			lastName.innerHTML = "<p id = 'LastName"+id+"'>" + lastName.innerText+"</p>";
-			email.innerHTML = " <p id = 'PhoneNumber"+id+"'>" + email.innerText+"</p>";
-			phone.innerHTML = "<p id = 'EmailAddress"+id+"'>" + phone.innerText+"</p>";
+			firstName.innerHTML = "<p id = 'FirstName"+id+"'>" + originFirst+"</p>";
+			lastName.innerHTML = "<p id = 'LastName"+id+"'>" + originLast+"</p>";
+			email.innerHTML = " <p id = 'PhoneNumber"+id+"'>" + originEmail+"</p>";
+			phone.innerHTML = "<p id = 'EmailAddress"+id+"'>" + originPhone+"</p>";
 
 		});
 
