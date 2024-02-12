@@ -272,7 +272,7 @@ function editContact(id){
     email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "' style='" + inputStyle + "'>";
     phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "' style='" + inputStyle + "'>";
 
-	document.getElementById('cancelEditButton').addEventListener("click", function()
+	document.getElementById('cancelEditButton'+id).addEventListener("click", function()
 		{
 			document.getElementById("editButton"+id).style.display = "inline-Block";
 			document.getElementById("cancelEditButton"+id).style.display = "none";
