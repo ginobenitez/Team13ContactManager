@@ -279,10 +279,10 @@ function editContact(id){
     		document.getElementById("saveEditButton"+id).style.display = "none";
 			document.getElementById("deleteButton"+id).style.display = "inline-block";
 			
-			firstName.innerHTML = "<p id = 'FirstName"+i+"'>" + firstName.innerText+"</p>";
-			lastName.innerHTML = "<p id = 'LastName"+i+"'>" + lastName.innerText+"</p>";
-			email.innerHTML = " <p id = 'PhoneNumber"+i+"'>" + email.innerText+"</p>";
-			phone.innerHTML = "<p id = 'EmailAddress"+i+"'>" + phone.innerText+"</p>";
+			firstName.innerHTML = "<p id = 'FirstName"+id+"'>" + firstName.innerText+"</p>";
+			lastName.innerHTML = "<p id = 'LastName"+id+"'>" + lastName.innerText+"</p>";
+			email.innerHTML = " <p id = 'PhoneNumber"+id+"'>" + email.innerText+"</p>";
+			phone.innerHTML = "<p id = 'EmailAddress"+id+"'>" + phone.innerText+"</p>";
 
 		});
 
