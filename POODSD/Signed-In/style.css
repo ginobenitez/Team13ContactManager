@@ -264,11 +264,17 @@ header {
     display: none;
 }
 
+/* BEGINNING OF EDIT FOR EDIT DELETE BUTTONS */
 .fa {
     cursor: pointer;
-    margin: 0 5px;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+    background-color: transparent;
+}
+
+.fa:hover {
+    transform: scale(1.1);
 }
 
 .fa-edit {
@@ -294,6 +300,7 @@ header {
 .fa-check:hover {
     color: #388E3C;
 }
+/* END OF EDIT FOR EDIT DELETE BUTTONS */
 
 .listClass {
     overflow-y: scroll;
