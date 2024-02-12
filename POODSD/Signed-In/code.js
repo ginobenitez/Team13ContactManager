@@ -272,7 +272,7 @@ function editContact(id){
     email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "' style='" + inputStyle + "'>";
     phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "' style='" + inputStyle + "'>";
 
-	if(document.getElementById('cancelEditbutton').clicked == true)
+	document.getElementById('cancelEditbutton').onclick == function()
 		{
 			document.getElementById("editButton"+id).style.display = "inline-Block";
 			document.getElementById("cancelEditButton"+id).style.display = "none";
@@ -284,7 +284,7 @@ function editContact(id){
 			email.innerHTML = " <p id = 'PhoneNumber"+i+"'>" + email.innerText+"</p>";
 			phone.innerHTML = "<p id = 'EmailAddress"+i+"'>" + phone.innerText+"</p>";
 
-		}
+		};
 
 };
 
