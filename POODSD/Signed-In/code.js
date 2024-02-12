@@ -237,7 +237,8 @@ function updateContact(id){
 				
 				document.getElementById("editButton"+id).style.display = "inline-block";
         		document.getElementById("saveEditButton"+id).style.display = "none";
-
+				document.getElementById("deleteButton"+id).style.display = "inline-block";
+				document.getElementById("cancelEditButton"+id).style.display = "none";
                 //location.reload();
             }
         };
