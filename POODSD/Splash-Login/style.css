@@ -138,14 +138,19 @@ header {
 
 /* BEGIN EDIT FOR WELCOME TEXT */
 .welcome-text {
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
     color: #fff;
     text-align: center;
+    background-color: transparent;
     animation: fadeIn 3s ease-out;
+    z-index: 10;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -153,6 +158,7 @@ header {
     to { opacity: 1; }
 }
 /* END EDIT FOR WELCOME TEXT */
+
 
 .logo img{
     width: 80px;
