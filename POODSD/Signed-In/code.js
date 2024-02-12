@@ -260,10 +260,12 @@ function editContact(id){
     let email_data = email.innerText;
     let phone_data = phone.innerText;
 
-    firstName.innerHTML = "<input class = 'input-box' type='text' id='nameFirst" + id + "' value='" + name_data + "'>";
-    lastName.innerHTML = "<input class = 'input-box' type='text' id='nameLast" + id + "' value='" + namel_data + "'>";
-    email.innerHTML = "<input class = 'input-box' type='text' id='emailaddress" + id + "' value='" + email_data + "'>";
-    phone.innerHTML = "<input class = 'input-box' type='text' id='phonenumber" + id + "' value='" + phone_data + "'>";
+    let inputStyle = "width: 100%; height: 40px; background: transparent; border: 2px solid #2c4766; outline: none; border-radius: 40px; font-size: 1em; color: #fff; padding: 0 20px;";
+
+    firstName.innerHTML = "<input type='text' id='nameFirst" + id + "' value='" + name_data + "' style='" + inputStyle + "'>";
+    lastName.innerHTML = "<input type='text' id='nameLast" + id + "' value='" + namel_data + "' style='" + inputStyle + "'>";
+    email.innerHTML = "<input type='text' id='emailaddress" + id + "' value='" + email_data + "' style='" + inputStyle + "'>";
+    phone.innerHTML = "<input type='text' id='phonenumber" + id + "' value='" + phone_data + "' style='" + inputStyle + "'>";
 
 };
 
