@@ -273,6 +273,7 @@ header {
     background-color: transparent;
 }
 
+
 .fa:hover {
     transform: scale(1.1);
     opacity: 0.8;
@@ -286,11 +287,11 @@ header {
     color: #0cd;
 }
 
-.fa-trash-o {
+.fa-trash-o .fa-times{
     color: #F44336;
 }
 
-.fa-trash-o:hover {
+.fa-trash-o:hover .fa-times:hover{
     color: #D32F2F;
 }
 
@@ -308,7 +309,7 @@ header {
     padding: 0;
 }
 
-.edit_button:hover, .delete_button:hover, .save_edit_button:hover {
+.edit_button:hover, .delete_button:hover, .save_edit_button:hover .cance_edit_button {
     background-color: transparent;
     border: none;
 }
