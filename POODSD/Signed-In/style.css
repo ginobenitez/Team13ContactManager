@@ -265,7 +265,7 @@ header {
 }
 
 /* BEGINNING OF EDIT FOR EDIT DELETE BUTTONS */
-.fa {
+.fa .fas{
     cursor: pointer;
     margin: 0 10px;
     font-size: 24px;
@@ -302,7 +302,7 @@ header {
     color: #388E3C;
 }
 
-.edit_button, .delete_button, .save_edit_button {
+.edit_button, .delete_button, .save_edit_button .cancel_edit_button {
     background-color: transparent;
     border: none;
     padding: 0;
