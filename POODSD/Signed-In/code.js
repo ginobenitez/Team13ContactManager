@@ -97,7 +97,7 @@ function doRegister () {
 				saveCookie();
 				
 				window.location.href = "contact.html";
-				alert(firstName+","+lastName+"UserId:"+userId);
+				
 				
 			}
 
