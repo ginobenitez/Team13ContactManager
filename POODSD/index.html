@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In and Register</title>
     <link rel="stylesheet" href="Splash-Login/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,14 +17,32 @@
             <img src="Splash-Login/poodlogo.png" alt="Logo">
         </div>
         <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <button class="btnHome-popup">Home</button>
+            <button class="btnAbout-popup">About</button>
             <button class="btnLogin-popup">Log In</button>
         </nav>
     </header>
 
     <!-- Gives welcome message that appears on-screen -->
     <div class="welcome-text">Welcome to Natural Connections!</div>
+    <div class="welcome-bottom-text"><i>Grow and manage your network naturally!!</i></div>
+    <div class ="about-box">
+        <div class = "about-text">
+            <p>Natural Connections is a LAMP (Linux, Apache, MySQL, PHP) Project, developed for COP4331C by students at the University of Central Florida.</p>
+
+            <ul>
+                Team:
+                <li> Gino Benitez - Project Manager / Database</li>
+                <li> Nathaniel Gibson - FrontEnd</li>
+                <li>Ronit Mahalmani - API</li>
+                <li>John Vea - API</li>   
+                <li>Ryan Rarooh - FrontEnd</li>
+            </ul>
+            
+
+        <button class = "githubButton" onclick="location.href='https://github.com/ginobenitez/Team13ContactManager';">Github</button>
+        </div>
+    </div>
 
 
     <!-- Handles the Login Box -->
