@@ -410,13 +410,16 @@ function loadContacts()
 					saveEditButton.innerHTML ="<i id= 'saveEditButton" + i + "'class='fa fa-check' onclick='updateContact(" + i + ")' style='display: none; font-size:20px;' color:'green'>";
 					
 					cancelEditButton.innerHTML ="<i id= 'cancelEditButton" + i + "'class='fa fa-times' style='display: none; font-size:20px;' color:'red'>";
+					
 					deleteButton.addEventListener('click', function() {
 					const confirmed = window.confirm("Are you sure you want to delete this contact? ");
 						if (confirmed) {
 							let firstName = fNameSpan.textContent;
 							firstName=firstName.replace(" First Name: ","");
+							firstName = firstName.trim();
 							let lastName = lNameSpan.textContent;
 							lastName=lastName.replace(" Last Name: ","");
+							lastName = firstName.trim();
 							deleteContact(firstName, lastName, userId);
 							newEntry.remove();
 						}
