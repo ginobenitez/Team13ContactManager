@@ -419,7 +419,7 @@ function loadContacts()
 							firstName = firstName.trim();
 							let lastName = lNameSpan.textContent;
 							lastName=lastName.replace(" Last Name: ","");
-							lastName = firstName.trim();
+							lastName = lastName.trim();
 							deleteContact(firstName, lastName, userId);
 							newEntry.remove();
 						}
